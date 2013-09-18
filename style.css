@@ -1,0 +1,298 @@
+/*
+Theme Name:     Castle Glenn Consultants Custom Theme
+Theme URI:      http://www.castleglenn.ca
+Description:    Custom theme built for Castle Glenn Consultants Inc. 2013 
+Author:         Tiffany Tse Designs and Development
+Author URI:     http://www.tiffanytse.ca
+Template:       twentytwelve
+Version:        0.1.0
+*/
+
+@import url("../twentytwelve/style.css");
+
+.placeholder img{
+	width: 100%;
+}
+
+#post-15 h1{
+	margin-top: 1.5em;
+}
+
+body{
+	background-color: #fff;
+}
+
+a{
+	color: #5279bb;
+}
+
+.site-title, .site-description{
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.site-title{
+	background: transparent url('imgs/logo.png')no-repeat top right;
+	background-size: 140%;
+	height: 125px;
+	margin: 0 auto;
+	padding: 0;
+	
+}
+
+.site-title:hover{
+	opacity: .7;
+}
+
+.site-info p{
+	color: #aaa;
+}
+
+.main-navigation{
+	margin-top: 0;
+}
+
+.menu-toggle{
+	padding: 1em 2em;
+}
+
+.toggled-on a{
+	text-decoration: none;
+	padding: .2em .5em;
+	border-bottom: 1px solid #ccc;
+}
+
+.service-type{
+	text-align: center;
+	padding: 20px 30px;
+	margin: 20px auto;
+	border: 1px solid #ddd;
+	max-width: 300px;
+	display: block;
+	text-decoration: none;
+	
+}
+
+.service-type:hover{
+	background-color: #eee;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+
+.service-type h2{
+	font-size: 1.2rem; 
+	margin: 1em;
+}
+
+.service-type p{
+	margin-bottom: 1.5em;
+}
+
+
+.category-s-private .entry-meta, .category-s-public .entry-meta, .category-services .entry-meta{
+	display: none;
+}
+
+.attachment-thumbnail{
+	display: none;
+}
+
+
+.visual-form-builder h3{
+	font-size: 1.285714286rem !important;
+	color: #444;
+}
+
+.visual-form-builder label{
+	color: #444;
+}
+
+.visual-form-builder .vfb-legend{
+	border-bottom: 1px solid #ddd;
+}
+
+.visual-form-builder fieldset{
+	background-color: #f9f9f9;
+	border: 0;
+	border-radius: 3px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+	}
+	
+input.vfb-text, 
+input[type="text"].vfb-text,
+input[type="tel"].vfb-text,
+input[type="email"].vfb-text, 
+input[type="url"].vfb-text, 
+textarea.vfb-textarea{
+	background: none repeat scroll 0 0 #fefefe;
+}
+	
+	input[type="submit"]{
+		margin-bottom: 30px;
+	}
+	
+	.vfb-page-next{
+		float: right;
+		padding: .5em 1em;
+		display: inline-block;
+		margin: 0 0 30px;
+		text-decoration: none;
+		position: relative;
+	}
+	
+	.vfb-page-counter{
+		margin: 10px 30px;
+		float: right;
+		display: none;
+	}
+	
+	.vfb-page-next:hover{
+		-webkit-transition: all 500ms ease-in-out;
+		-moz-transition: all 500ms ease-in-out;
+		-ms-transition: all 500ms ease-in-out;
+		-o-transition: all 500ms ease-in-out;
+		transition: all 500ms ease-in-out;
+
+		color: #ccc;
+	}
+	.vfb-page-next:active{
+	
+	top: 1px;
+	
+}
+
+label.error{
+	color: #BC1212;
+}
+/* ------------------media queries --------------- */
+
+@media screen and (min-width: 320px) {
+	.site-title{
+		background: transparent url('imgs/logo.png')no-repeat top center;
+		background-size: 100%;
+		height: 110px;
+	}
+	
+}
+
+@media screen and (min-width: 380px) {
+	.site-title{
+		height: 120px;
+		display: inline-block;
+	}
+	
+}
+
+@media screen and (min-width: 380px) {
+	.site-title{
+		height:125px;
+		max-width: 350px;
+	}
+	
+}
+
+@media screen and (min-width: 600px) {
+	
+	.site-title{
+		background: transparent url('imgs/logo.png')no-repeat top left;
+		margin: 0;
+		background-size: 100%;
+		
+		height:125px;
+		max-width: 350px;
+	}
+	
+	.main-navigation li{
+		margin: 0 2.657142857rem 0 0;;
+	}
+	
+.entry-header img.wp-post-image{
+		display: inline-block;
+		float: left;
+		margin: 0 20px 5rem 0;
+}	
+
+
+
+.service-items h1, .news-items h1{
+	display: inline;
+}
+
+
+
+
+
+
+.service-type{
+	display: inline-block;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 30%;
+	margin:20px 0;
+	float: left;
+	border: 1px solid #ddd;	
+}
+
+.middle{
+	margin: 20px 5%;
+}
+
+}
+
+
+@media screen and (min-width: 760px) {
+	
+#post-10 .col-right{
+	width: 30%;
+	float: left;
+	display: inline-block;
+}
+
+.col-right{
+	margin-top: 15px;
+}
+	
+#contact-form-1{
+	float: left;
+	width: 70%;
+	display: inline;
+}
+}
+
+
+@media screen and (min-width: 960px) {
+	
+	body .site{
+		margin: 0 auto;
+		box-shadow: none;
+	
+	}
+	
+	.site-title{
+		display: inline;
+		float: left;
+	}
+	
+	.site-header hgroup{
+		border-bottom: 1px solid #ededed;
+		
+	}
+	
+	.menu-main-navigation-container{
+		display: inline-block;
+		float: right;
+		margin-top: -65px;
+	}
+	
+	.main-navigation ul.nav-menu, .main-navigation div.nav-menu ul{
+		border: 0;
+	}
+	
+	
+}
