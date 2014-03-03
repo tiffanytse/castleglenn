@@ -1,0 +1,43 @@
+/* 
+* Variables
+*/
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1; }
+
+body.login {
+  background-color: #f9f9f9; }
+
+.login h1 a {
+  background-image: url("./imgs/logo.png");
+  background-image: none, url("./imgs/logo.svg");
+  width: 300px;
+  background-size: 100%; }
+
+.login form {
+  box-shadow: none;
+  border: 1px solid #dddddd; }
+
+.login input[type='submit'] {
+  border: 0;
+  background: #5178bc;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out; }
+  .login input[type='submit']:hover {
+    background: #36558b; }

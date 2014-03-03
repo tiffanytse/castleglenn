@@ -1,0 +1,26 @@
+@import "variables";
+@import "mixins";
+
+body.login{
+  background-color: #f9f9f9;
+}
+
+.login h1 a{
+  @include vector-bg-with-fallback(logo);
+  width: 300px;
+  background-size: 100%;
+}
+
+.login form{
+  box-shadow: none;
+  border: 1px solid $line-grey;
+}
+
+.login input[type='submit']{
+  border: 0;
+  background: $blue;
+  @include ease;
+  &:hover{
+    background: darken($blue, 15%);
+  }
+}

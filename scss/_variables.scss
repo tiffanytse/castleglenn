@@ -1,0 +1,28 @@
+/* 
+* Variables
+*/
+
+//Colors
+$text-color: #444;
+$light-grey: #ededed;
+$light-line-grey: #f5f5f5;
+$line-grey: #ddd;
+$black: #1d1d1d;
+$blue: #5178bc;
+
+// Font Stacks
+$source-sans-pro:   'Source Sans Pro', Helvetica, Arial, sans-serif;
+
+// Screen sizes
+// -> to include write the following
+// @media #{$variable-name} { ... }
+
+$mobile: "only screen and (min-width: 20em)"; //320px
+$mobile-landscape: "only screen and (min-width: 37.5em)"; //600px
+$tablet: "only screen and (min-width: 47.5em)"; //760px
+$tablet-landscape: "only screen and (min-width: 60em)"; //960px
+$desktop-small: "only screen and (min-width: 75em)"; //1200px
+$desktop: "only screen and (min-width: 87.5em)"; //1400px
+$desktop-large: "only screen and (min-width: 100em)"; //1600px
+$desktop-xlarge: "only screen and (min-width: 110em)"; //1760px
+

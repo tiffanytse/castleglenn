@@ -1,0 +1,31 @@
+/*
+Theme Name: NYA Custom Child Theme
+Theme URI: http://nya.ca
+Author: Tiffany Tse Design and Development
+Author URI: http://tiffanytse.ca
+Description: A custom theme created for Northern Youth Abroad
+Version: 1.0
+Template: twentytwelve
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: nya.ca
+*/
+
+@import url("../twentytwelve/style.css");
+
+@import "mixins";
+@import "variables"; 
+@import "layout";
+@import "typography";
+@import "navigation";
+@import "widgets";
+@import "components";
+@import "forms";
+@import "pages";
+
+
+
+
+
+
+

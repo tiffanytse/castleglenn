@@ -1,0 +1,112 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: $source-sans-pro;
+  font-size: 100%;
+}
+
+html, body, #page{
+  width: 100%;
+  
+}
+
+@media #{$desktop-xlarge}{
+  html{
+    font-size: 100%;
+  }
+}
+/*
+body{
+  font-family: $lato;
+  background: #111 url('images/bg.jpg') no-repeat top center;
+  background-size: cover;
+  
+  @media only screen and (min-width: 37.5em) { //600px
+  background: #111 url('images/bg.jpg') no-repeat top center;
+  background-size: contain;
+  }
+  
+  @media only screen and (min-width: 60.0em) { //960px
+  background-position: center -275px;
+  background-size: contain;
+  } 
+}
+*/
+body .site{
+  padding: 0;
+  background-color: #fff;
+  margin: 0 auto;
+  @media #{$mobile-landscape} { //960px
+    margin: 0 auto; 
+    padding:0;
+    max-width: inherit; 
+  }
+}
+
+.site-content{
+  margin-top: 0;
+  article{
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+  }
+}
+
+.wrapper{
+  @include border-box;
+  @include zero;
+  @include rem-fallback(max-width, 75);
+  margin: 0 auto;
+  position: relative;
+  clear: both;
+  @media #{$mobile-landscape}{ //600px
+    margin: 0 auto;
+  }
+  @media only screen and (min-width: 65em){ // overrides parent theme styles
+    padding: 0 1em;
+  }
+  @media #{$desktop} { //1400px
+    @include zero;
+    margin: 0 auto;
+  }
+} 
+
+%wrapper{
+  @include border-box;
+  @include zero;
+  @include rem-fallback(max-width, 100);
+  margin: 0 auto;
+  position: relative;
+  @media #{$mobile-landscape}{ //600px
+    margin: 0 auto;
+  }
+  @media only screen and (min-width: 65em){ // overrides parent theme styles
+    padding: 0 1em;
+  }
+  @media #{$desktop} { //1400px
+    @include zero;
+    margin: 0 auto;
+  }
+}
+
+
+
+footer[role="contentinfo"]{
+  @include border-box;
+  @include rem-fallback(max-width, 100);
+  margin: 0;
+  padding: 2em 1em; 
+  @media #{$mobile-landscape} { //600px
+    @include zero;
+    padding: 2em 1em;
+    margin: 0 auto;
+  }
+  @media only screen and (min-width: 65em){ // overrides parent theme styles
+    padding: 2em 3em;
+    
+  }
+  @media #{$desktop-large} { //1400px
+    @include zero;
+    margin: 0 auto;
+  }
+}

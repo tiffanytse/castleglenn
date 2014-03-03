@@ -1,0 +1,73 @@
+h1, .alpha{ 
+    @include rem-fallback (font-size, 2);
+}
+
+h2, .beta{
+  @include rem-fallback (font-size, 1.5);
+  
+}
+h3, .gamma{
+  @include rem-fallback (font-size, 1.17);
+}
+
+h4, .delta{
+  @include rem-fallback (font-size, 1);
+  
+}
+
+h5,.epsilon{
+  @include rem-fallback (font-size, 0.83);
+}
+
+h6,.zeta{
+  @include rem-fallback (font-size, .67);
+  text-transform: uppercase;
+}
+
+
+.entry-content,
+.comment-content{
+  h1, .alpha{ 
+      @include rem-fallback (font-size, 2);
+  }
+  h2, .beta{
+    @include rem-fallback (font-size, 1.5);
+  }
+  h3, .gamma{
+    @include rem-fallback (font-size, 1.17);
+  }
+  h4, .delta{
+    @include rem-fallback (font-size, 1);
+  }
+  h5,.epsilon{
+    @include rem-fallback (font-size, 0.83);
+  }
+  h6,.zeta{
+    @include rem-fallback (font-size, .67);
+    text-transform: uppercase;
+  }
+}
+
+.milli{
+  @include rem-fallback(font-size, .6875);
+}
+
+.mega{
+  @include rem-fallback(font-size, 4);
+}
+
+.giga{
+  @include rem-fallback(font-size, 3);
+}
+
+.entry-content{
+  a, 
+  a:link,
+  a:visited{
+    color: darken($blue, 10%);
+  }
+}
+
+
+
+

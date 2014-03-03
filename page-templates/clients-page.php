@@ -24,7 +24,7 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 			<?php
-			
+			// adds decription to hover of Googlemap pin
 			function prefix_pgmm_item($itemContent) {
       	$itemContent = '';
       	$itemContent .= '<h2>';
@@ -37,7 +37,7 @@ get_header(); ?>
         $itemContent .= '<br>';
       	return $itemContent;
       }
-
+      // adds google map for projects custom post type
       add_filter('pronamic_google_maps_mashup_item', 'prefix_pgmm_item');
       if ( function_exists( 'pronamic_google_maps_mashup' ) ) {
           pronamic_google_maps_mashup(

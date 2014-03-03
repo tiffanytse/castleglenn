@@ -17,13 +17,16 @@ get_header(); ?>
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
       <!-- slider -->
+      <div class="margin-auto">
       <?php echo do_shortcode("[metaslider id=347]"); ?>
+      </div>
       <!-- slider -->
+      <div class="blue-box"></div>
 
 			<?php while ( have_posts() ) : the_post(); ?>
-				
+				<div class="home-content">
 				<?php get_template_part( 'content', 'page' ); ?>
-
+        </div>
 			<?php endwhile; // end of the loop. ?>
 
 			<?php get_template_part( 'services-bar'); ?>
