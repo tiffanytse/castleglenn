@@ -1,38 +1,23 @@
-.placeholder img{
-	width: 100%;
+.entry-header{
+  .entry-title{
+    @extend .alpha;
+  }
+} 
+
+date{
+  display: block;
+  margin-top: 4em;
+  margin-bottom: 1em;
+  font-style: italic;
+  color: #777;
 }
 
-body{
-	background-color: #fff;
+.single{
+  date{
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid $light-line-grey;
+  }
 }
-
-a{
-	color: #5279bb;
-}
-
-
-
-
-
-.main-navigation{
-	margin-top: 0;
-}
-
-.menu-toggle{
-	padding: 1em 2em;
-}
-
-.toggled-on a{
-	text-decoration: none;
-	padding: .2em .5em;
-	border-bottom: 1px solid #ccc;
-}
-
-.attachment-thumbnail{
-	display: none;
-}
-
-
-
 
 

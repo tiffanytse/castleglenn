@@ -11,7 +11,7 @@
  */
 ?>
 	</div><!-- #main .wrapper -->
-	<footer id="colophon" role="contentinfo">
+	<footer id="colophon" role="contentinfo" class="wrapper margin-auto">
 	  <!-- Footer Navigation -->
     <?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_class' => 'footer-menu', 'fallback_cb' => false ) ); ?>
     <!-- Footer navigation close -->

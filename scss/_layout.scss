@@ -8,7 +8,8 @@ html, body{
 
 html, body, #page{
   width: 100%;
-  
+  background: #fff;
+  box-shadow: none;
 }
 
 @media #{$desktop-xlarge}{
@@ -44,13 +45,6 @@ body .site{
   }
 }
 
-.site-content{
-  margin-top: 0;
-  article{
-    padding-bottom: 2em;
-    margin-bottom: 2em;
-  }
-}
 
 .wrapper{
   @include border-box;
@@ -74,7 +68,7 @@ body .site{
 %wrapper{
   @include border-box;
   @include zero;
-  @include rem-fallback(max-width, 100);
+  @include rem-fallback(max-width, 75);
   margin: 0 auto;
   position: relative;
   @media #{$mobile-landscape}{ //600px
@@ -91,19 +85,54 @@ body .site{
 
 
 
+
+.site-content{
+  margin-top: 0;
+  article{
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+  }
+  #content{
+    max-width: 75em;
+    margin: 3em auto;
+    article{
+      padding: 0 2em;
+      @media #{$tablet-landscape}{
+        padding: 0 3em;
+        
+      }
+    }
+  }
+}
+
+.home .site-content{
+  #content{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    article{
+      padding: 0 1em;
+    }
+  }
+}
+
+
 footer[role="contentinfo"]{
   @include border-box;
-  @include rem-fallback(max-width, 100);
+  @include rem-fallback(max-width, 75);
   margin: 0;
-  padding: 2em 1em; 
+  border: 0;
+  padding: 2em 2em; 
   @media #{$mobile-landscape} { //600px
+    border-top: 1px solid $light-line-grey;
+    
     @include zero;
-    padding: 2em 1em;
+    padding: 2em 3em;
     margin: 0 auto;
   }
   @media only screen and (min-width: 65em){ // overrides parent theme styles
     padding: 2em 3em;
-    
   }
   @media #{$desktop-large} { //1400px
     @include zero;

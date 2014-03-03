@@ -52,6 +52,10 @@
         text-decoration: none;
         text-transform: capitalize;
         border: 0;
+        color: $blue;
+        &:hover{
+          color: darken($blue, 10%);
+        }
       }
 
       .sub-menu{
@@ -63,6 +67,10 @@
             padding-top: .5em;
             padding-bottom: .5em;
             background-color: #f9f9f9;
+            color: $blue;
+            &:hover{
+              color: darken($blue, 10%);
+            }
           }
         }
         li:first-child a{
@@ -103,13 +111,11 @@
             @include zero;
             border-bottom: 1px solid $light-line-grey;
             a{
-              color: #222;
               padding-left: 1.5em;
               padding-right: 1.5em;
               background-color: #fff;
               &:hover{
                 background-color: #f9f9f9;
-                
               }
             }//a
           }//li

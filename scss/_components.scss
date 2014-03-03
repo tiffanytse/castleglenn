@@ -14,16 +14,34 @@
   hgroup{
     margin-top: .3em;
   }
-  @media #{$tablet}{
+  @media #{$mobile-landscape}{
     border-bottom: 1px solid #ccc;
   }
   @media only screen and (min-width: 61.875em){
     padding-bottom: .3em;
   }
+  .wrapper{
+    @media #{$tablet-landscape}{
+      padding: 0 2em;
+      
+    }
+  }
 }
 
+a, 
+a:link,
+a:visited{
+  color: $blue;
+}
+
+a:hover,
+a:active,
+a:focus{
+  color: darken($blue, 10%);
+}
+
+
 footer[role="contentinfo"]{
-  border: 0;
   line-height: 1.5;
   @extend .cf;
   
@@ -37,6 +55,7 @@ footer[role="contentinfo"]{
     clear: both;
     padding-top: 2em;
     color: #bbb;
+    @extend .milli;
   }
 }
 
