@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: News Page
+ * Template Name: News Page Template
  *
  * Description: Twenty Twelve loves the no-sidebar look as much as
  * you do. Use this page template to remove the sidebar from any page.
