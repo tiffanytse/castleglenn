@@ -15,13 +15,11 @@
 		</div>
 		<?php endif; ?>
 		<header class="entry-header">
-			<a href="<?php echo get_permalink(); ?>"> 
-			<?php the_post_thumbnail('thumbnail'); ?></a>
 			<?php if ( is_single() ) : ?>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php else : ?>
 			<h1 class="entry-title">
-				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+				<?php the_title(); ?>
 			</h1>
 			<?php endif; // is_single() ?>
 			<?php if ( comments_open() ) : ?>
@@ -30,6 +28,40 @@
 				</div><!-- .comments-link -->
 			<?php endif; // comments_open() ?>
 		</header><!-- .entry-header -->
+		
+		<?php
+		// adds decription to hover of Googlemap pin
+		function prefix_pgmm_item($itemContent) {
+    	$itemContent = '';
+    	$itemContent .= '<h2>';
+    	$itemContent .= '	<a href="'. get_permalink() .'">';
+    	$itemContent .= '		'. get_the_title();
+    	$itemContent .= '	</a>';
+    	$itemContent .= '</h2>';
+      $itemContent .= '<br>';
+    	$itemContent .= wpautop(get_post_meta(get_the_ID(), '_pronamic_google_maps_description', true));
+      $itemContent .= '<br>';
+    	return $itemContent;
+    }
+    // adds google map for projects custom post type
+    add_filter('pronamic_google_maps_mashup_item', 'prefix_pgmm_item');
+    if ( function_exists( 'pronamic_google_maps_mashup' ) ) {
+        pronamic_google_maps_mashup(
+            array(
+                'post_type' => 'projects'
+            ), 
+            array(
+                'width'          => 900,
+                'height'         => 400, 
+                'nopaging'       => true,
+                'map_type_id'    => 'roadmap',
+                'marker_options' => array(
+                                'icon' => 'http://imgur.com/bFRjgj2.png'
+                            )
+            )                
+        );
+    }
+    ?>
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 		<div class="entry-summary">
@@ -62,6 +94,3 @@
 			<?php endif; ?>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post -->
-	
-	
-	

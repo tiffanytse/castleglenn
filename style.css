@@ -172,7 +172,7 @@ h1, .alpha, .entry-header .entry-title {
   font-size: 32px;
   font-size: 2rem; }
 
-h2, .beta {
+h2, .beta, .project-items .entry-title {
   font-size: 24px;
   font-size: 1.5rem; }
 
@@ -200,9 +200,11 @@ h6, .zeta {
 .entry-header .comment-content .entry-title {
   font-size: 32px;
   font-size: 2rem; }
-.entry-content h2, .entry-content .beta,
+.entry-content h2, .entry-content .beta, .entry-content .project-items .entry-title, .project-items .entry-content .entry-title,
 .comment-content h2,
-.comment-content .beta {
+.comment-content .beta,
+.comment-content .project-items .entry-title,
+.project-items .comment-content .entry-title {
   font-size: 24px;
   font-size: 1.5rem; }
 .entry-content h3, .entry-content .gamma,
@@ -558,9 +560,6 @@ hr {
     -ms-border-radius: 50%;
     border-radius: 50%; }
 
-.category-s-private .entry-meta, .category-s-public .entry-meta, .category-services .entry-meta {
-  display: none; }
-
 /*
 * Flexslider
 */
@@ -841,8 +840,12 @@ date {
       clear: none;
       padding-left: 175px; } }
 
-.category-services date {
+.category-services date,
+.type-projects date {
   display: none; }
+
+.project-items .entry-title {
+  margin-bottom: 0; }
 
 /*
 * Contact Page
@@ -854,5 +857,6 @@ date {
 /* 
 * Client Page
 */
-.page-template-page-templatesclients-page-php .canvas {
+.page-template-page-templatesclients-page-php .canvas,
+.page-template-page-templatesprojects-page-php .canvas {
   width: 100% !important; }

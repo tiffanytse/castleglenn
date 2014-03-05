@@ -25,7 +25,7 @@ get_header(); ?>
 
       <article>
       <header class="entry-header">
-        <h2 class="alpha entry-title">See our past projects</h2>
+        <h2 class="alpha entry-title">Our Past Projects</h2>
       </header>
 			<?php
 			// adds decription to hover of Googlemap pin

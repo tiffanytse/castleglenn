@@ -16,7 +16,6 @@
 		<?php endif; ?>
 		<header class="entry-header">
 			<a href="<?php echo get_permalink(); ?>"> 
-			<?php the_post_thumbnail('thumbnail'); ?></a>
 			<?php if ( is_single() ) : ?>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php else : ?>
@@ -30,16 +29,6 @@
 				</div><!-- .comments-link -->
 			<?php endif; // comments_open() ?>
 		</header><!-- .entry-header -->
-
-		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-		<div class="entry-summary">
-			<?php the_excerpt(); ?>
-		</div><!-- .entry-summary -->
-		<?php else : ?>
-		<div class="entry-content">
-			<?php the_excerpt(); ?>
-		</div><!-- .entry-content -->
-		<?php endif; ?>
 
 		<footer class="entry-meta">
 			<?php //twentytwelve_entry_meta(); ?>
@@ -62,6 +51,3 @@
 			<?php endif; ?>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post -->
-	
-	
-	
