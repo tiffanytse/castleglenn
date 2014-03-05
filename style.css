@@ -356,7 +356,7 @@ h6, .zeta {
       width: auto;
       margin: 0 auto; }
       #site-navigation li {
-        margin: 2em 1.8em 0 !important; }
+        margin: 1.6em 1.8em .5em !important; }
         #site-navigation li .sub-menu li {
           margin: 0 !important; } }
   @media only screen and (min-width: 63em) {
@@ -377,13 +377,18 @@ h6, .zeta {
   height: 75px;
   background-position: center center;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  margin-top: 1em; }
   @media only screen and (min-width: 20em) {
     .site-title {
       float: left;
       height: 75px;
       max-width: 275px;
-      display: inline-block; } }
+      display: inline-block;
+      margin-left: 1em; } }
+  @media only screen and (min-width: 37.5em) {
+    .site-title {
+      margin-top: 10px; } }
 
 .site-title:hover {
   opacity: .7; }

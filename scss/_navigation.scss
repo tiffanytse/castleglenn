@@ -133,7 +133,7 @@
     width: auto;
     margin: 0 auto;
     li{
-      margin: 2em 1.8em 0 !important;
+      margin: 1.6em 1.8em .5em !important;
       .sub-menu li{
         margin: 0 !important;
       }
@@ -161,11 +161,16 @@
 	height: 75px;
 	background-position: center center;
   @include zero;
+  margin-top: 1em;
 	@media #{$mobile}{ //600px
     float: left;
     height: 75px;
     max-width: 275px;
     display: inline-block;
+    margin-left: 1em;
+  }
+  @media only screen and (min-width: 37.5em){ //600px
+    margin-top: 10px;
   }
 }
 .site-title:hover{
