@@ -3,7 +3,7 @@
 */
 .service-bar{
   @media #{$tablet}{
-	  max-width: 900px;
+	  max-width: 1050px;
 	  margin: 0 auto;
 	}
 }
@@ -19,7 +19,7 @@
 	@media #{$tablet}{
     float: left;
     width: 33.33%;
-    max-width: 300px;
+    max-width: 350px;
     margin-top: 0;
     padding-top: 0;
     border-bottom: 0;
@@ -50,7 +50,7 @@
   }
   img{
    @include ease;
-    max-width: 150px;
+    max-width: 200px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -o-border-radius: 50%;

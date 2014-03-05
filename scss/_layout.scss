@@ -114,9 +114,16 @@ body .site{
   article{
     padding-bottom: 2em;
     margin-bottom: 2em;
+    border-bottom: 1px solid #f5f5f5;
+    &:last-child{
+      border-bottom: 0;
+    }
+    &.page{
+      border-bottom: 4px double #f5f5f5;
+    }
   }
   #content{
-    max-width: 75em;
+    max-width: 71em;
     margin: 3em auto;
     article{
       padding: 0 2em;
@@ -143,9 +150,10 @@ body .site{
 }
 
 
+
 footer[role="contentinfo"]{
   @include border-box;
-  @include rem-fallback(max-width, 75);
+  @include rem-fallback(max-width, 71);
   margin: 0;
   border: 0;
   padding: 2em 2em; 
@@ -160,7 +168,6 @@ footer[role="contentinfo"]{
     padding: 2em 3em;
   }
   @media #{$desktop-large} { //1400px
-    @include zero;
     margin: 0 auto;
   }
 }

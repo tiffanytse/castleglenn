@@ -5,13 +5,12 @@
 .visual-form-builder {
   padding-bottom: 0;
   color: $text-color; 
-  
   label{
     color: $text-color;
   }
   .vfb-legend, 
   .vfb-section-div{
-    margin-top: 1em;
+    margin-top: 1em; 
     color: $text-color;
     border-bottom: 1px solid #ddd;
     -webkit-border-radius: 3px;
@@ -22,7 +21,8 @@
   }
   
   .vfb-legend{
-    padding: 1em;
+    padding: 0 1em 1em; 
+    border-radius: 0;
   }
   
   
@@ -73,6 +73,13 @@
     .vfb-page-counter{
       margin-top: .5em;
     }
+  }
+  
+  .vfb-error{
+    font-weight: normal;
+    background-color: #FEF7F7;
+    display: inline-block;
+    padding: .2em 1em;
   }
   
   .vfb-item-address{    

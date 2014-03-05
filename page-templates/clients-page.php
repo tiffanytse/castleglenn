@@ -23,6 +23,10 @@ get_header(); ?>
 
 			<?php endwhile; // end of the loop. ?>
 
+      <article>
+      <header class="entry-header">
+        <h2 class="alpha entry-title">See our past projects</h2>
+      </header>
 			<?php
 			// adds decription to hover of Googlemap pin
 			function prefix_pgmm_item($itemContent) {
@@ -45,15 +49,18 @@ get_header(); ?>
                   'post_type' => 'projects'
               ), 
               array(
-                  'width'          => 800,
+                  'width'          => 900,
                   'height'         => 400, 
                   'nopaging'       => true,
-                  'map_type_id'    => 'roadmap',                
+                  'map_type_id'    => 'roadmap',
+                  'marker_options' => array(
+                                  'icon' => 'http://imgur.com/bFRjgj2.png'
+                              )
               )                
           );
       }
       ?>
-
+      </article>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

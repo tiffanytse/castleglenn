@@ -21,3 +21,58 @@ date{
 }
 
 
+/*
+* Services Pages
+*/
+
+.service-items article, .pc-items article{
+  min-height: 185px;
+  @extend .cf;
+  @media #{$mobile-landscape}{
+    .wp-post-image{
+      float: left;
+      margin: 0 1.5em 1em 0;
+    }
+    .entry-title, .entry-content{
+      clear: none;
+      padding-left: 175px;
+    }
+  }
+}
+
+.category-services{
+  date{
+    display: none;
+  }
+}
+
+
+/*
+* Contact Page
+*/
+
+.col-right{
+  float: left;
+  margin-right: 2em;
+}
+
+
+/* 
+* Client Page
+*/
+
+.page-template-page-templatesclients-page-php{
+  .canvas{
+    width: 100% !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
