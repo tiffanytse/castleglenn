@@ -17,13 +17,12 @@
   @media #{$mobile-landscape}{
     border-bottom: 1px solid #ccc;
   }
-  @media only screen and (min-width: 61.875em){
+  @media only screen and (min-width: 63em){
     padding-bottom: .3em;
   }
   .wrapper{
     @media #{$tablet-landscape}{
       padding: 0 2em;
-      
     }
   }
 }

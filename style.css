@@ -97,6 +97,22 @@ body .site {
       padding: 0;
       margin: 0 auto; } }
 
+@media only screen and (min-width: 47.5em) {
+  #page.site {
+    background-image: url(imgs/landscape.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%; }
+    #page.site .all {
+      margin-top: 100px;
+      background-color: #fff; } }
+
+@media only screen and (min-width: 47.5em) {
+  .home #page.site {
+    background: #fff; }
+    .home #page.site .all {
+      margin-top: 0; } }
+
 .site-content {
   margin-top: 0; }
   .site-content article {
@@ -107,9 +123,9 @@ body .site {
     margin: 3em auto; }
     .site-content #content article {
       padding: 0 2em; }
-      @media only screen and (min-width: 60em) {
+      @media only screen and (min-width: 63em) {
         .site-content #content article {
-          padding: 0 3em; } }
+          padding: 0 2em; } }
 
 .home .site-content #content {
   margin: 0;
@@ -118,6 +134,9 @@ body .site {
   max-width: 100%; }
   .home .site-content #content article {
     padding: 0 1em; }
+    @media only screen and (min-width: 63em) {
+      .home .site-content #content article {
+        padding: 0 1em; } }
 
 footer[role="contentinfo"] {
   -moz-box-sizing: border-box;
@@ -300,10 +319,10 @@ h6, .zeta {
       border-bottom: 1px solid #ccc; }
     @media only screen and (min-width: 37.5em) {
       #site-navigation #menu-main-navigation {
-        margin: 0 auto;
         border: 0;
-        display: inline-block !important;
+        float: right;
         width: auto;
+        display: inline-block !important;
         margin-bottom: 1em; }
         #site-navigation #menu-main-navigation li:last-child a {
           border-bottom: 0; }
@@ -311,7 +330,7 @@ h6, .zeta {
           border: 0;
           padding: 0;
           display: inline-block;
-          margin: 2em 1em 0; }
+          margin: 2em 1.8em 0; }
           #site-navigation #menu-main-navigation li a {
             padding: 0;
             border: 0; }
@@ -333,15 +352,18 @@ h6, .zeta {
               border: 0;
               margin-top: 0; } }
   @media only screen and (min-width: 47.5em) {
-    #site-navigation li {
-      margin: 2em 2em 0 !important; }
-      #site-navigation li .sub-menu li {
-        margin: 0 !important; } }
-  @media only screen and (min-width: 61.875em) {
+    #site-navigation {
+      width: auto;
+      margin: 0 auto; }
+      #site-navigation li {
+        margin: 2em 1.8em 0 !important; }
+        #site-navigation li .sub-menu li {
+          margin: 0 !important; } }
+  @media only screen and (min-width: 63em) {
     #site-navigation {
       float: right; }
       #site-navigation li {
-        margin: 1.5em 2em 0 !important; }
+        margin: 1.5em 1.8em 0 !important; }
         #site-navigation li .sub-menu li {
           margin: 0 !important; } }
 
@@ -356,11 +378,11 @@ h6, .zeta {
   background-position: center center;
   margin: 0;
   padding: 0; }
-  @media only screen and (min-width: 37.5em) {
+  @media only screen and (min-width: 20em) {
     .site-title {
       float: left;
-      height: 100px;
-      max-width: 300px;
+      height: 75px;
+      max-width: 275px;
       display: inline-block; } }
 
 .site-title:hover {
@@ -452,7 +474,7 @@ h6, .zeta {
 /*
 * Flexslider
 */
-@media only screen and (min-width: 60em) {
+@media screen and (min-width: 63em) {
   .home .all {
     z-index: 1;
     position: absolute;
@@ -531,7 +553,7 @@ h6, .zeta {
 .home-content {
   padding: 2em 1em 1em; }
 
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 63em) {
   .blue-box {
     height: 160px;
     background: #5178bc; }
@@ -569,10 +591,10 @@ h6, .zeta {
   @media only screen and (min-width: 37.5em) {
     .site-header {
       border-bottom: 1px solid #ccc; } }
-  @media only screen and (min-width: 61.875em) {
+  @media only screen and (min-width: 63em) {
     .site-header {
       padding-bottom: .3em; } }
-  @media only screen and (min-width: 60em) {
+  @media only screen and (min-width: 63em) {
     .site-header .wrapper {
       padding: 0 2em; } }
 

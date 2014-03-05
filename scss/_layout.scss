@@ -43,6 +43,7 @@ body .site{
     padding:0;
     max-width: inherit; 
   }
+  
 }
 
 
@@ -84,7 +85,29 @@ body .site{
 }
 
 
+#page.site{
+  @media #{$tablet}{
+    background-image: url(imgs/landscape.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    //background-attachment: fixed;
+    background-size: 100%;
+    .all{
+      margin-top: 100px;
+      background-color: #fff;
+    }
+  }
+  
+}
 
+.home #page.site{
+  @media #{$tablet}{
+    background: #fff;
+    .all{
+      margin-top: 0;
+    }
+  }
+} 
 
 .site-content{
   margin-top: 0;
@@ -98,8 +121,7 @@ body .site{
     article{
       padding: 0 2em;
       @media #{$tablet-landscape}{
-        padding: 0 3em;
-        
+        padding: 0 2em;
       }
     }
   }
@@ -113,6 +135,9 @@ body .site{
     max-width: 100%;
     article{
       padding: 0 1em;
+      @media #{$tablet-landscape}{
+        padding: 0 1em;
+      }
     }
   }
 }

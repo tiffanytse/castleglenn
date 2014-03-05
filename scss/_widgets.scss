@@ -71,7 +71,7 @@
 */
 
 .home{
-  @media #{$tablet-landscape}{
+  @media screen and (min-width: 63em){
     .all{
       z-index: 1;
       position: absolute;
