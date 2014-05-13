@@ -78,11 +78,19 @@
       width: 100%;
     }
   }
+.metaslider .flexslider{
+  margin: 0;
+
+}
   .flexslider{
     margin-bottom: 0;
     @include border-box;
     width: 100%;
     margin: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
     @media #{$desktop-small}{
       max-height: 600px;
       overflow: hidden;
@@ -135,8 +143,7 @@
         }
       }
       @media#{$desktop-small}{
-        bottom: inherit;
-        top: 560px;
+        bottom: 0;
         z-index: 1010;
       }
     }
