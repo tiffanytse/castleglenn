@@ -24,13 +24,11 @@ get_header(); ?>
 			<div class="pc-items">
 					<?php query_posts( array( 
 						        'post_type' => 'public-consultation',
-						        'showposts' => 10
+						        'showposts' => 25
 											) );
 
 									if ( have_posts() ) while ( have_posts() ) : the_post();
-				//get_post_content shows the next and previous posts
 										get_template_part('pc-content', get_post_format() ); 
-
 									endwhile; 
 
 								wp_reset_query(); ?>

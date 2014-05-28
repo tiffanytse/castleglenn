@@ -23,18 +23,33 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 			<div class="project-items">
-					<?php query_posts( array( 
-						        'post_type' => 'projects',
-						        'showposts' => 10
-											) );
+					<?php 
+	        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-									if ( have_posts() ) while ( have_posts() ) : the_post();
-				//get_post_content shows the next and previous posts
-										get_template_part('projects-content', get_post_format() ); 
+          query_posts(array(
+          	'post_type'      => 'projects', // You can add a custom post type if you like
+          	'paged'          => $paged,
+          	'posts_per_page' => 10,
+          	'caller_get_posts' => 1,
+          	'rewrite' => array( 'slug' => 'project-list' ),
+          ));
 
-									endwhile; 
+          if ( have_posts() ) : ?>
 
-								wp_reset_query(); ?>
+          <?php while ( have_posts() ) : the_post(); ?>
+
+          	<?php get_template_part('projects-content', get_post_format() );   ?>
+
+          <?php endwhile;?>
+
+          	<?php echo my_pagination(); ?>
+
+          <?php else : ?>
+
+                  <?php echo "There were no posts found." ?>
+
+          <?php endif; ?>
+
 			</div>
 		</div><!-- #content -->
 	</div><!-- #primary -->

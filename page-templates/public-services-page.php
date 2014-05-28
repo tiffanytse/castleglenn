@@ -27,9 +27,7 @@ get_header(); ?>
 							<?php query_posts( 'category_name=s-public' );
 
 								if ( have_posts() ) while ( have_posts() ) : the_post();
-                  //get_post_content shows the next and previous posts
 									get_template_part('services-content', get_post_format() ); 
-
 								endwhile; 
 
 							wp_reset_query(); ?>

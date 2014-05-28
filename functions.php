@@ -34,3 +34,28 @@ function custom_login_css() {
   add_action('wp_print_styles', 'load_google_fonts');  
   
   
+// Add pagination
+
+if ( ! function_exists( 'my_pagination' ) ) :
+	function my_pagination() {
+		global $wp_query;
+
+		$big = 999999999; // need an unlikely integer
+		
+		echo paginate_links( array(
+			'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+			'format' => '?paged=%#%',
+			'current' => max( 1, get_query_var('paged') ),
+			'total' => $wp_query->max_num_pages
+		) );
+	}
+endif;
+
+
+
+add_filter('redirect_canonical','pif_disable_redirect_canonical');
+
+function pif_disable_redirect_canonical($redirect_url) {
+if (is_singular('pov_channel')) $redirect_url = false;
+return $redirect_url;
+}
