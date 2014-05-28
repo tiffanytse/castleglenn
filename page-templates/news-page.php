@@ -30,7 +30,7 @@ get_header(); ?>
                 query_posts(array(
                 	'post_type'      => 'news', // You can add a custom post type if you like
                 	'paged'          => $paged,
-                	'posts_per_page' => 10
+                	'posts_per_page' => 2
                 ));
 
                 if ( have_posts() ) : ?>
@@ -41,8 +41,10 @@ get_header(); ?>
 
                 <?php endwhile;?>
 
-                	<?php echo my_pagination(); ?>
-
+                  <div class="pagination">
+                    <?php echo my_pagination(); ?>
+                  </div>
+                
                 <?php else : ?>
 
                   <?php echo "There were no posts found." ?>

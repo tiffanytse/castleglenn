@@ -50,12 +50,3 @@ if ( ! function_exists( 'my_pagination' ) ) :
 		) );
 	}
 endif;
-
-
-
-add_filter('redirect_canonical','pif_disable_redirect_canonical');
-
-function pif_disable_redirect_canonical($redirect_url) {
-if (is_singular('pov_channel')) $redirect_url = false;
-return $redirect_url;
-}

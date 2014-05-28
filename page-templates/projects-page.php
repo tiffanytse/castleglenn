@@ -42,7 +42,9 @@ get_header(); ?>
 
           <?php endwhile;?>
 
-          	<?php echo my_pagination(); ?>
+            <div class="pagination">
+          	  <?php echo my_pagination(); ?>
+            </div>
 
           <?php else : ?>
 
