@@ -559,7 +559,8 @@ hr {
   text-align: center; }
   .service-bar aside p {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    line-height: 1.5; }
   @media only screen and (min-width: 47.5em) {
     .service-bar aside {
       float: left;
@@ -767,16 +768,6 @@ hr {
     -o-box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.05);
     box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.05);
     width: 100%; }
-    @media only screen and (min-width: 37.5em) {
-      .visual-form-builder input.vfb-text,
-      .visual-form-builder input[type="text"].vfb-text,
-      .visual-form-builder input[type="tel"].vfb-text,
-      .visual-form-builder input[type="email"].vfb-text,
-      .visual-form-builder input[type="url"].vfb-text,
-      .visual-form-builder textarea.vfb-textarea,
-      .visual-form-builder select.vfb-select,
-      .visual-form-builder .visual-form-builder input[type="file"] {
-        width: 48%; } }
   .visual-form-builder .vfb-item.vfb-item-page-break {
     position: relative;
     bottom: -1em; }
@@ -858,8 +849,8 @@ hr {
 */
 @media only screen and (min-width: 47.5em) {
   #contact-form-1 {
-    float: left;
-    width: 70%;
+    float: right;
+    width: 60%;
     display: inline; } }
 date {
   display: block;
