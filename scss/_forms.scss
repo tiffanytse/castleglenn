@@ -149,7 +149,6 @@
      border: 0;
      color: #fff !important;
      text-decoration: none;
-     //margin: 1em 0;
      padding: .4em 1em .3em;
      display: inline-block;
      -webkit-box-shadow: none;
@@ -164,7 +163,7 @@
      &:active,
      &:focus{
        text-decoration: none;
-       background: darken($blue, 15%);
+       background: darken($blue, 20%);
        
      }
    }  

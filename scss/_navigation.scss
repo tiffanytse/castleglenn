@@ -207,4 +207,43 @@
 }// menu-footer-menu-container
 
 
+/*
+* Pagination
+*/
 
+.pagination{
+  margin-left: 1.5em;
+  display: inline-block;
+  @media #{$tablet}{ //600px
+	  margin-left: 1em;
+	}
+	@media #{$tablet-landscape}{ 
+	  margin-left: 1.5em;
+	}
+  span, a{
+    padding: .25em .5em;
+    font-weight: bold;
+    text-decoration: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    background-color: $blue;
+    color: #fff;
+    @include ease;
+    
+    &.current{
+      background-color: darken($blue, 20%);
+    }//.current
+    
+    @media #{$tablet}{ //600px
+      padding: .5em .75em;
+    }//media-query
+  }//span,a
+  a:hover, 
+  a:focus, 
+  a:active{
+    background-color: darken($blue, 20%);
+  } 
+}//.pagination

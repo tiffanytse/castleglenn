@@ -1,16 +1,16 @@
-@import url("../twentytwelve/style.css");
 /*
-Theme Name: NYA Custom Child Theme
-Theme URI: http://nya.ca
+Theme Name: Castleglenn Custom Child Theme
+Theme URI: http://castleglenn.ca
 Author: Tiffany Tse Design and Development
 Author URI: http://tiffanytse.ca
-Description: A custom theme created for Northern Youth Abroad
+Description: A custom theme created for Castleglenn Consultants Inc.
 Version: 1.0
 Template: twentytwelve
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: nya.ca
+Text Domain: castleglenn.ca
 */
+@import url("../twentytwelve/style.css");
 .cf:before, footer[role="contentinfo"]:before, .service-items article:before, .pc-items article:before,
 .cf:after,
 footer[role="contentinfo"]:after,
@@ -153,20 +153,23 @@ footer[role="contentinfo"] {
   max-width: 71rem;
   margin: 0;
   border: 0;
-  padding: 2em 2em; }
+  padding: 2em 2em;
+  border-top: 1px solid whitesmoke; }
   @media only screen and (min-width: 37.5em) {
     footer[role="contentinfo"] {
-      border-top: 1px solid whitesmoke;
       margin: 0;
       padding: 0;
       padding: 2em 3em;
-      margin: 0 auto; } }
+      margin: 0 auto;
+      border-top: 1px solid whitesmoke; } }
   @media only screen and (min-width: 65em) {
     footer[role="contentinfo"] {
-      padding: 2em 3em; } }
+      padding: 2em 3em;
+      border-top: 1px solid whitesmoke; } }
   @media only screen and (min-width: 100em) {
     footer[role="contentinfo"] {
-      margin: 0 auto; } }
+      margin: 0 auto;
+      border-top: 1px solid whitesmoke; } }
 
 h1, .alpha, .entry-header .entry-title {
   font-size: 32px;
@@ -503,6 +506,44 @@ hr {
     .menu-footer-menu-container #menu-footer-menu li a {
       text-decoration: none; }
 
+/*
+* Pagination
+*/
+.pagination {
+  margin-left: 1.5em;
+  display: inline-block; }
+  @media only screen and (min-width: 47.5em) {
+    .pagination {
+      margin-left: 1em; } }
+  @media only screen and (min-width: 63em) {
+    .pagination {
+      margin-left: 1.5em; } }
+  .pagination span, .pagination a {
+    padding: .25em .5em;
+    font-weight: bold;
+    text-decoration: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #5178bc;
+    color: #fff;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out; }
+    .pagination span.current, .pagination a.current {
+      background-color: #2e4979; }
+    @media only screen and (min-width: 47.5em) {
+      .pagination span, .pagination a {
+        padding: .5em .75em; } }
+  .pagination a:hover,
+  .pagination a:focus,
+  .pagination a:active {
+    background-color: #2e4979; }
+
 /* 
 * Service Type 
 */
@@ -810,7 +851,7 @@ hr {
     .visual-form-builder input[type="submit"]:active,
     .visual-form-builder input[type="submit"]:focus {
       text-decoration: none;
-      background: #36558b; }
+      background: #2e4979; }
 
 /*
 * Contact Form

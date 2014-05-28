@@ -157,17 +157,23 @@ footer[role="contentinfo"]{
   margin: 0;
   border: 0;
   padding: 2em 2em; 
-  @media #{$mobile-landscape} { //600px
-    border-top: 1px solid $light-line-grey;
-    
+  border-top: 1px solid $light-line-grey;
+  
+  @media #{$mobile-landscape} { //600px    
     @include zero;
     padding: 2em 3em;
     margin: 0 auto;
+    border-top: 1px solid $light-line-grey;
+    
   }
   @media only screen and (min-width: 65em){ // overrides parent theme styles
     padding: 2em 3em;
+    border-top: 1px solid $light-line-grey;
+    
   }
   @media #{$desktop-large} { //1400px
     margin: 0 auto;
+    border-top: 1px solid $light-line-grey;
+    
   }
 }

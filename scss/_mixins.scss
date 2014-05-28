@@ -131,3 +131,25 @@ $public_path: "./";
   #{$attribute}: $color;
 }
 
+
+// Button styling
+
+@mixin button{
+  background: $blue;
+  border: 0;
+  color: #fff !important;
+  text-decoration: none;
+  padding: .5em 1em;
+  display: inline-block;
+  @include ease;
+  
+
+  &:hover, 
+  &:active,
+  &:focus{
+    text-decoration: none;
+    background: darken($blue, 15%);
+
+  }
+}
+
