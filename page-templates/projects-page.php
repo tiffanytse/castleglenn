@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * Template Name: Projects Listing Page Template
@@ -19,85 +18,41 @@ get_header(); ?>
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'projects-content-page', 'page' ); ?>
-			<?php endwhile; // end of the loop. ?>
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'projects-content-page', 'page' ); ?>
+		<?php endwhile; // end of the loop. ?>
 
 			<div class="project-items">
-					<?php 
-	        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			  <?php 
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        
+        query_posts(array(
+        	'post_type'      => 'projects', // You can add a custom post type if you like
+        	'paged'          => $paged,
+        	'posts_per_page' => 10,
+        	'caller_get_posts' => 1,
+        	'rewrite' => array( 'slug' => 'project-list' ),
+        ));
 
-          query_posts(array(
-          	'post_type'      => 'projects', // You can add a custom post type if you like
-          	'paged'          => $paged,
-          	'posts_per_page' => 10,
-          	'caller_get_posts' => 1,
-          	'rewrite' => array( 'slug' => 'project-list' ),
-          ));
+        if ( have_posts() ) : ?>
 
-          if ( have_posts() ) : ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
-          <?php while ( have_posts() ) : the_post(); ?>
+        	<?php get_template_part('projects-content', get_post_format() );   ?>
 
-          	<?php get_template_part('projects-content', get_post_format() );   ?>
+        <?php endwhile;?>
 
-          <?php endwhile;?>
+          <div class="pagination">
+            <?php echo my_pagination(); ?>
+          </div>
+        
+        <?php else : ?>
 
-            <div class="pagination">
-          	  <?php echo my_pagination(); ?>
-            </div>
+          <?php echo "There were no posts found." ?>
 
-          <?php else : ?>
+        <?php endif; ?>  
+</div>
+</div><!-- #content -->
+</div><!-- #primary -->
 
-                  <?php echo "There were no posts found." ?>
-
-          <?php endif; ?>
-
-			</div>
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
-=======
-<?php
-/**
- * Template Name: Projects Listing Page Template
- *
- * Description: Twenty Twelve loves the no-sidebar look as much as
- * you do. Use this page template to remove the sidebar from any page.
- *
- * Tip: to remove the sidebar from all posts and pages simply remove
- * any active widgets from the Main Sidebar area, and the sidebar will
- * disappear everywhere.
- *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
- */
-
-get_header(); ?>
-
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'projects-content-page', 'page' ); ?>
-			<?php endwhile; // end of the loop. ?>
-
-			<div class="project-items">
-					<?php query_posts( array( 
-						        'post_type' => 'projects',
-						        'showposts' => 10
-											) );
-
-									if ( have_posts() ) while ( have_posts() ) : the_post();
-				//get_post_content shows the next and previous posts
-										get_template_part('projects-content', get_post_format() ); 
-
-									endwhile; 
-
-								wp_reset_query(); ?>
-			</div>
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
->>>>>>> f81dc56f975d694701bd1639c9bb93b0c3043cf3
 <?php get_footer(); ?>

@@ -30,7 +30,7 @@ get_header(); ?>
                 query_posts(array(
                 	'post_type'      => 'news', // You can add a custom post type if you like
                 	'paged'          => $paged,
-                	'posts_per_page' => 10
+                	'posts_per_page' => 2
                 ));
 
                 if ( have_posts() ) : ?>
