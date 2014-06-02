@@ -53,7 +53,7 @@
             array(
                 'width'          => 900,
                 'height'         => 400, 
-                'nopaging'       => false,
+                'nopaging'       => true,
                 'map_type_id'    => 'roadmap',
                 'marker_options' => array(
                                 'icon' => 'http://imgur.com/bFRjgj2.png'
