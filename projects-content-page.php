@@ -48,7 +48,8 @@
     if ( function_exists( 'pronamic_google_maps_mashup' ) ) {
         pronamic_google_maps_mashup(
             array(
-                'post_type' => 'projects'
+                'post_type' => 'projects', 
+                'posts_per_page' => 9999
             ), 
             array(
                 'width'          => 900,
