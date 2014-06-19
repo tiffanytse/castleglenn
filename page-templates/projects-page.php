@@ -22,36 +22,61 @@ get_header(); ?>
 			<?php get_template_part( 'projects-content-page', 'page' ); ?>
 		<?php endwhile; // end of the loop. ?>
 
+
+<!-- List projects -->
 			<div class="project-items">
-			  <?php 
-        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        
-        query_posts(array(
-        	'post_type'      => 'projects', // You can add a custom post type if you like
-        	'paged'          => $paged,
-        	'posts_per_page' => 10,
-        	'caller_get_posts' => 1,
-        	'rewrite' => array( 'slug' => 'project-list' ),
-        ));
+			
+      <section="tab p-institutional">
+        <h2>Institutional Projects</h2>
+        <ul>
+        <?php
+        $args = array ( 
+        'post_type' => 'projects',
+        'category_name' => 'p-institutional',      
+         );
+        $custom_query = new WP_Query( $args );
 
-        if ( have_posts() ) : ?>
+        if ( $custom_query->have_posts() ):
+            while ( $custom_query->have_posts() ) :
+                $custom_query->the_post();
+                ?>
+                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                <?php
+            endwhile;
+        else:
+            // Insert any content or load a template for no posts found.
+        endif;
+        wp_reset_query();
+        ?>
+        </ul>
+      </section>
+      
+      <section="tab p-private">
+			  <h2>Private Projects</h2>
+  			<ul>
+        <?php
+        $args = array ( 
+        'post_type' => 'projects',
+        'category_name' => 'p-private',      
+         );
+        $custom_query = new WP_Query( $args );
 
-        <?php while ( have_posts() ) : the_post(); ?>
-
-        	<?php get_template_part('projects-content', get_post_format() );   ?>
-
-        <?php endwhile;?>
-
-          <div class="pagination">
-            <?php echo my_pagination(); ?>
-          </div>
-        
-        <?php else : ?>
-
-          <?php echo "There were no posts found." ?>
-
-        <?php endif; ?>  
-</div>
+        if ( $custom_query->have_posts() ):
+            while ( $custom_query->have_posts() ) :
+                $custom_query->the_post();
+                ?>
+                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                <?php
+            endwhile;
+        else:
+            // Insert any content or load a template for no posts found.
+        endif;
+        wp_reset_query();
+        ?>
+        </ul>
+      </section>
+				
+      </div> <!-- project-items -->
 </div><!-- #content -->
 </div><!-- #primary -->
 
