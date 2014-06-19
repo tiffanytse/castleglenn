@@ -24,58 +24,84 @@ get_header(); ?>
 
 
 <!-- List projects -->
-			<div class="project-items">
-			
-      <section="tab p-institutional">
-        <h2>Institutional Projects</h2>
-        <ul>
-        <?php
-        $args = array ( 
-        'post_type' => 'projects',
-        'category_name' => 'p-institutional',      
-         );
-        $custom_query = new WP_Query( $args );
-
-        if ( $custom_query->have_posts() ):
-            while ( $custom_query->have_posts() ) :
-                $custom_query->the_post();
-                ?>
-                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                <?php
-            endwhile;
-        else:
-            // Insert any content or load a template for no posts found.
-        endif;
-        wp_reset_query();
-        ?>
-        </ul>
-      </section>
+      <div class="project-items">
       
-      <section="tab p-private">
-			  <h2>Private Projects</h2>
-  			<ul>
-        <?php
-        $args = array ( 
-        'post_type' => 'projects',
-        'category_name' => 'p-private',      
-         );
-        $custom_query = new WP_Query( $args );
+        <section="tab p-public">
+          <h2>Public Service Projects</h2>
+          <ul>
+          <?php
+          $args = array ( 
+          'post_type' => 'projects',
+          'category_name' => 'p-public',      
+           );
+          $custom_query = new WP_Query( $args );
+        
+          if ( $custom_query->have_posts() ):
+              while ( $custom_query->have_posts() ) :
+                  $custom_query->the_post();
+                  ?>
+                  <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                  <?php
+              endwhile;
+          else:
+              echo '<p>There are no projects listed.</p>';
+          endif;
+          wp_reset_query();
+          ?>
+          </ul>
+        </section>
+      
+        <section="tab p-private">
+          <h2>Private Service Projects</h2>
+          <ul>
+          <?php
+          $args = array ( 
+          'post_type' => 'projects',
+          'category_name' => 'p-private',      
+           );
+          $custom_query = new WP_Query( $args );
+        
+          if ( $custom_query->have_posts() ):
+              while ( $custom_query->have_posts() ) :
+                  $custom_query->the_post();
+                  ?>
+                  <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                  <?php
+              endwhile;
+          else:
+            echo '<p>There are no projects listed.</p>';
+          endif;
+          wp_reset_query();
+          ?>
+            </ul>
+          </section>
+        
+          <section="tab p-institutional">
+            <h2>Institutional Service Projects</h2>
+            <ul>
+            <?php
+            $args = array ( 
+            'post_type' => 'projects',
+            'category_name' => 'p-institutional',      
+             );
+            $custom_query = new WP_Query( $args );
 
-        if ( $custom_query->have_posts() ):
-            while ( $custom_query->have_posts() ) :
-                $custom_query->the_post();
-                ?>
-                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+            if ( $custom_query->have_posts() ):
+                while ( $custom_query->have_posts() ) :
+                    $custom_query->the_post(); ?>
+                  
+                    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                  
                 <?php
-            endwhile;
-        else:
-            // Insert any content or load a template for no posts found.
-        endif;
-        wp_reset_query();
-        ?>
-        </ul>
-      </section>
-				
+                endwhile;
+            else:
+              echo '<p>There are no projects listed.</p>';
+            endif;
+            wp_reset_query();
+            ?>
+            </ul>
+          </section>
+      
       </div> <!-- project-items -->
 </div><!-- #content -->
 </div><!-- #primary -->
