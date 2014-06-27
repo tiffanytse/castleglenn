@@ -961,8 +961,8 @@ date {
   .tabs #tab3:checked ~ .p-institutional {
     display: block !important; }
   .tabs input:checked + label {
-    border-right-color: #DDD;
-    border-left-color: #DDD;
+    border-right-color: #ddd;
+    border-left-color: #ddd;
     border-bottom-color: #fff;
     text-decoration: none;
     -webkit-box-shadow: 0 -5px 0 0 #5178bc;

@@ -144,17 +144,15 @@ date{
    #tab3:checked ~ .p-institutional{
      display: block !important;
    }
-   
    input:checked + label {
-     border-right-color: #DDD;
-     border-left-color: #DDD;
+     border-right-color: #ddd;
+     border-left-color: #ddd;
      border-bottom-color: #fff;
      text-decoration: none;
      -webkit-box-shadow:0 -5px 0 0 $blue;
      box-shadow:0 -5px 0 0 $blue;
      background-color: #fff;
    }
-   
    h2{
      margin-bottom: .5em;
    }
