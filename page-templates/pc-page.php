@@ -24,7 +24,7 @@ get_header(); ?>
 			<div class="pc-items">
 					<?php query_posts( array( 
 						        'post_type' => 'public-consultation',
-						        'showposts' => 25
+						        'posts_per_page' => -1,
 											) );
 
 									if ( have_posts() ) while ( have_posts() ) : the_post();
