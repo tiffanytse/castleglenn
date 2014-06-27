@@ -75,7 +75,7 @@ function prefix_pgm_description( $description ) {
 	$description = '';
 	$description .= '<div>';
 	
-	$description .= '<h5>' . get_the_title() . '</h5>';	
+	$description .= '<h4>' . get_the_title() . '</h4>';	
 	$description .= wpautop(get_post_meta(get_the_ID(), '_pronamic_google_maps_address', true));
 	$description .= '</div>';
 

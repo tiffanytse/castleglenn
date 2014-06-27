@@ -33,14 +33,12 @@
 		// adds decription to hover of Googlemap pin
 		function prefix_pgmm_item($itemContent) {
     	$itemContent = '';
-    	$itemContent .= '<h2>';
+    	$itemContent .= '<h4>';
     	$itemContent .= '	<a href="'. get_permalink() .'">';
     	$itemContent .= '		'. get_the_title();
     	$itemContent .= '	</a>';
-    	$itemContent .= '</h2>';
-      $itemContent .= '<br>';
+    	$itemContent .= '</h4>';
     	$itemContent .= wpautop(get_post_meta(get_the_ID(), '_pronamic_google_maps_description', true));
-      $itemContent .= '<br>';
     	return $itemContent;
     }
     // adds google map for projects custom post type

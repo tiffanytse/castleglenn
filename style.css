@@ -898,6 +898,20 @@ date {
 .page-template-page-templatesprojects-page-php .canvas,
 .single-projects .canvas {
   width: 100% !important; }
+.page-template-page-templatesclients-page-php .pgm h4, .page-template-page-templatesclients-page-php .pgmm h4,
+.page-template-page-templatesprojects-page-php .pgm h4,
+.page-template-page-templatesprojects-page-php .pgmm h4,
+.single-projects .pgm h4,
+.single-projects .pgmm h4 {
+  margin: 16px 8px 0px;
+  margin: 1rem 0.5rem 0rem; }
+.page-template-page-templatesclients-page-php .pgm p, .page-template-page-templatesclients-page-php .pgmm p,
+.page-template-page-templatesprojects-page-php .pgm p,
+.page-template-page-templatesprojects-page-php .pgmm p,
+.single-projects .pgm p,
+.single-projects .pgmm p {
+  margin: 8px 8px 16px;
+  margin: 0.5rem 0.5rem 1rem; }
 
 .single-projects .pgm {
   padding: 0 2em 2em; }

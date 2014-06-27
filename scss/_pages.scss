@@ -77,11 +77,22 @@ date{
   .canvas{
     width: 100% !important;
   }
+  
+  .pgm, .pgmm{
+    h4{
+      @include rem-fallback( margin, 1, .5, 0);
+    }
+    p{
+     @include rem-fallback( margin, .5, .5, 1);
+    }
+  }
 }
 
 .single-projects .pgm{
   padding: 0 2em 2em;
 }
+
+
 
 
 
