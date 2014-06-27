@@ -33,7 +33,6 @@ get_header(); ?>
             <label for="tab2">Private</label>
             <input id="tab3" type="radio" name="tabs">
             <label for="tab3">Institutional</label>
-            <input id="tab4" type="radio" name="tabs">
         
           <section class="tab p-public">
             <h2>Public Service Projects</h2>
