@@ -1,0 +1,3 @@
+# Ignore generated files / directories
+.sass-cache
+*.sass-cache*
