@@ -19,11 +19,10 @@ function custom_login_css() {
 function add_my_scripts() {
  
   // Enqueue the modernizr script file and specify that it should be placed in the <head>
-  wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri(). '/js/modernizr.custom.min.js');
+  //wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri(). '/js/modernizr.custom.min.js');
   wp_enqueue_script( 'respond', get_stylesheet_directory_uri(). '/js/respond.min.js');
-
 }
- 
+
 // Run this function during the wp_enqueue_scripts action
 add_action('wp_enqueue_scripts', 'add_my_scripts');
  
