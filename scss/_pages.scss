@@ -21,9 +21,9 @@ date{
 }
 
 
-/*
-* Services Pages
-*/
+/**
+ * Services Pages
+ */
 
 .service-items article, .pc-items article{
   min-height: 185px;
@@ -57,9 +57,9 @@ date{
   }
 }
 
-/*
-* Contact Page
-*/
+/**
+ * Contact Page
+ */
 
 .col-right{
   float: left;
@@ -67,9 +67,9 @@ date{
 }
 
 
-/* 
-* Client Page
-*/
+/** 
+ * Client Page
+ */
 
 .page-template-page-templatesclients-page-php,
 .page-template-page-templatesprojects-page-php,
@@ -77,7 +77,6 @@ date{
   .canvas{
     width: 100% !important;
   }
-  
   .pgm, .pgmm{
     h4{
       @include rem-fallback( margin, 1, .5, 0);
@@ -92,11 +91,6 @@ date{
   padding: 0 2em 2em;
 }
 
-
-
-
-
-
 .gm-style-iw{
   overflow-x: hidden !important;
   overflow-y: hidden !important;
@@ -107,7 +101,80 @@ date{
   }
 }
 
+/**
+ * Project Tabs 
+ */
+.tabs{
+  margin-top: 1.5em;
+  input, section {
+     clear: both;
+     padding-top: 10px;
+     display: none;
+   }
+   section{
+     border: 1px solid #ddd;
+     position: relative;
+     z-index: 10;
+     padding: 2em 1em 3em;
+     
+   }
+   label {
+     font-weight: bold;
+     display: block;
+     float: left;
+     padding: .6em 1em .8em;
+     border-right: 1px solid transparent;
+     border-left: 1px solid transparent;
+     position: relative;
+     z-index: 100;
+     bottom: -1px;
+     margin: 0 4px 0 0;
+   }
+   
+   label:hover {
+     cursor: pointer;
+     border-right: 1px solid #ddd;
+     border-left: 1px solid #ddd;
+     -webkit-box-shadow:0 -5px 0 0 $light-grey;
+     box-shadow:0 -5px 0 0 $light-grey;
+   }
+
+   #tab1:checked ~ .p-public, 
+   #tab2:checked ~ .p-private, 
+   #tab3:checked ~ .p-institutional{
+     display: block !important;
+   }
+   
+   input:checked + label {
+     border-right-color: #DDD;
+     border-left-color: #DDD;
+     border-bottom-color: #fff;
+     text-decoration: none;
+     -webkit-box-shadow:0 -5px 0 0 $blue;
+     box-shadow:0 -5px 0 0 $blue;
+     background-color: #fff;
+   }
+   
+   h2{
+     margin-bottom: .5em;
+   }
+   ul {
+     list-style: initial;
+     margin-left: 2em;
+     li{
+        margin: 1em 0;
+        a{
+          text-decoration: none;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+   }
+}
 
 
+
+ 
 
 

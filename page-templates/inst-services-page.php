@@ -24,7 +24,12 @@ get_header(); ?>
 
 			<?php endwhile; // end of the loop. ?>
 			<div class="service-items">
-							<?php query_posts( 'category_name=s-institutional' );
+							<?php query_posts(array(
+                'category_name' => 's-institutional', // You can add a custom post type if you like
+                'posts_per_page' => -1, 
+                'orderby' => 'title', 
+                'order' => 'ASC'
+              ));
 
 								if ( have_posts() ) while ( have_posts() ) : the_post();
 			//get_post_content shows the next and previous posts

@@ -13,8 +13,9 @@ Text Domain: castleglenn.ca
 
 @import url("../twentytwelve/style.css");
 
-@import "mixins";
+
 @import "variables"; 
+@import "mixins";
 @import "layout";
 @import "typography";
 @import "components";

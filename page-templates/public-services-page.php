@@ -24,8 +24,13 @@ get_header(); ?>
 
 			<?php endwhile; // end of the loop. ?>
 			<div class="service-items">
-							<?php query_posts( 'category_name=s-public' );
-
+							<?php  query_posts(array(
+                'category_name' => 's-public',
+                'posts_per_page' => -1, 
+                'orderby' => 'title', 
+                'order' => 'ASC' 
+                ));
+                
 								if ( have_posts() ) while ( have_posts() ) : the_post();
 									get_template_part('services-content', get_post_format() ); 
 								endwhile; 

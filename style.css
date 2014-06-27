@@ -11,6 +11,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: castleglenn.ca
 */
 @import url("../twentytwelve/style.css");
+/* 
+* Variables
+*/
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,400italic,600italic,700italic);
 .cf:before, footer[role="contentinfo"]:before, .service-items article:before, .pc-items article:before,
 .cf:after,
 footer[role="contentinfo"]:after,
@@ -31,9 +35,6 @@ footer[role="contentinfo"]:after,
 .cf, footer[role="contentinfo"], .service-items article, .pc-items article {
   *zoom: 1; }
 
-/* 
-* Variables
-*/
 html, body {
   margin: 0;
   padding: 0;
@@ -506,9 +507,9 @@ hr {
     .menu-footer-menu-container #menu-footer-menu li a {
       text-decoration: none; }
 
-/*
-* Pagination
-*/
+/**
+ * Pagination
+ */
 .pagination {
   margin-left: 1.5em;
   display: inline-block; }
@@ -864,9 +865,9 @@ date {
   padding-bottom: 1em;
   border-bottom: 1px solid whitesmoke; }
 
-/*
-* Services Pages
-*/
+/**
+ * Services Pages
+ */
 .service-items article, .pc-items article {
   min-height: 185px; }
   @media only screen and (min-width: 37.5em) {
@@ -884,16 +885,16 @@ date {
 .project-items .entry-title {
   margin-bottom: 0; }
 
-/*
-* Contact Page
-*/
+/**
+ * Contact Page
+ */
 .col-right {
   float: left;
   margin-right: 2em; }
 
-/* 
-* Client Page
-*/
+/** 
+ * Client Page
+ */
 .page-template-page-templatesclients-page-php .canvas,
 .page-template-page-templatesprojects-page-php .canvas,
 .single-projects .canvas {
@@ -923,3 +924,58 @@ date {
     overflow: hidden !important;
     min-height: 30px;
     min-width: 100px; }
+
+/**
+ * Project Tabs 
+ */
+.tabs {
+  margin-top: 1.5em; }
+  .tabs input, .tabs section {
+    clear: both;
+    padding-top: 10px;
+    display: none; }
+  .tabs section {
+    border: 1px solid #ddd;
+    position: relative;
+    z-index: 10;
+    padding: 2em 1em 3em; }
+  .tabs label {
+    font-weight: bold;
+    display: block;
+    float: left;
+    padding: .6em 1em .8em;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    position: relative;
+    z-index: 100;
+    bottom: -1px;
+    margin: 0 4px 0 0; }
+  .tabs label:hover {
+    cursor: pointer;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    -webkit-box-shadow: 0 -5px 0 0 #ededed;
+    box-shadow: 0 -5px 0 0 #ededed; }
+  .tabs #tab1:checked ~ .p-public,
+  .tabs #tab2:checked ~ .p-private,
+  .tabs #tab3:checked ~ .p-institutional {
+    display: block !important; }
+  .tabs input:checked + label {
+    border-right-color: #DDD;
+    border-left-color: #DDD;
+    border-bottom-color: #fff;
+    text-decoration: none;
+    -webkit-box-shadow: 0 -5px 0 0 #5178bc;
+    box-shadow: 0 -5px 0 0 #5178bc;
+    background-color: #fff; }
+  .tabs h2 {
+    margin-bottom: .5em; }
+  .tabs ul {
+    list-style: initial;
+    margin-left: 2em; }
+    .tabs ul li {
+      margin: 1em 0; }
+      .tabs ul li a {
+        text-decoration: none; }
+        .tabs ul li a:hover {
+          text-decoration: underline; }
