@@ -895,6 +895,17 @@ date {
 * Client Page
 */
 .page-template-page-templatesclients-page-php .canvas,
-.page-template-page-templatesprojects-page-php .canvas {
+.page-template-page-templatesprojects-page-php .canvas,
+.single-projects .canvas {
   width: 100% !important; }
->>>>>>> d5dc4ceef3d52484b3874f157c89a977dce4ca14
+
+.single-projects .pgm {
+  padding: 0 2em 2em; }
+
+.gm-style-iw {
+  overflow-x: hidden !important;
+  overflow-y: hidden !important; }
+  .gm-style-iw div {
+    overflow: hidden !important;
+    min-height: 30px;
+    min-width: 100px; }

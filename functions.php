@@ -64,3 +64,22 @@ if ( ! function_exists( 'my_pagination' ) ) :
 		) );
 	}
 endif;
+
+
+/**
+ * Filter snippet
+ */
+function prefix_pgm_description( $description ) {
+	global $post;
+	
+	$description = '';
+	$description .= '<div>';
+	
+	$description .= '<h5>' . get_the_title() . '</h5>';	
+	$description .= wpautop(get_post_meta(get_the_ID(), '_pronamic_google_maps_address', true));
+	$description .= '</div>';
+
+	return $description;
+}
+
+add_filter( 'pronamic_google_maps_item_description', 'prefix_pgm_description' );

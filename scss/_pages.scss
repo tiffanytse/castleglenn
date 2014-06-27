@@ -72,16 +72,29 @@ date{
 */
 
 .page-template-page-templatesclients-page-php,
-.page-template-page-templatesprojects-page-php{
+.page-template-page-templatesprojects-page-php,
+.single-projects{
   .canvas{
     width: 100% !important;
   }
 }
 
+.single-projects .pgm{
+  padding: 0 2em 2em;
+}
 
 
 
 
+.gm-style-iw{
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+  div{
+    overflow: hidden !important;
+    min-height: 30px;
+    min-width: 100px;
+  }
+}
 
 
 
