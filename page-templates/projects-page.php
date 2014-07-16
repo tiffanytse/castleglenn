@@ -21,106 +21,42 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'projects-content-page', 'page' ); ?>
 		<?php endwhile; // end of the loop. ?>
+    <div class="left col">
+    <?php 
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
+        query_posts(array(
+        	'post_type'      => 'projects', // You can add a custom post type if you like
+        	'paged'          => $paged,
+        	'posts_per_page' => 10,
+        	'caller_get_posts' => 1,
+        	'rewrite' => array( 'slug' => 'project-list' ),
+        ));  
+          
+        if ( have_posts() ) : ?>
 
-<!-- List projects -->
-      <article class="project-items">
-        <h1>View Projects by Type</h1>
-        <div class="tabs">
-          <input id="tab1" type="radio" name="tabs" checked>
-            <label for="tab1">Public</label>
-            <input id="tab2" type="radio" name="tabs">
-            <label for="tab2">Private</label>
-            <input id="tab3" type="radio" name="tabs">
-            <label for="tab3">Institutional</label>
-        
-          <section class="tab p-public">
-            <h2>Public Service Projects</h2>
-            <ul>
-            <?php
-            $args = array ( 
-            'post_type' => 'projects',
-            'category_name' => 'p-public',
-            'posts_per_page' => -1,
-            'orderby' => 'title', 
-            'order' => 'ASC'      
-             );
-            $custom_query = new WP_Query( $args );
-        
-            if ( $custom_query->have_posts() ):
-                while ( $custom_query->have_posts() ) :
-                    $custom_query->the_post();
-                    ?>
-                    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                    <?php
-                endwhile;
-            else:
-                echo '<p>There are no projects listed.</p>';
-            endif;
-            wp_reset_query();
-            ?>
-            </ul>
-          </section>
-      
-          <section class="tab p-private">
-            <h2>Private Service Projects</h2>
-            <ul>
-            <?php
-            $args = array ( 
-            'post_type' => 'projects',
-            'category_name' => 'p-private',
-            'posts_per_page' => -1,
-            'orderby' => 'title', 
-            'order' => 'ASC'      
-             );
-            $custom_query = new WP_Query( $args );
-        
-            if ( $custom_query->have_posts() ):
-                while ( $custom_query->have_posts() ) :
-                    $custom_query->the_post();
-                    ?>
-                    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                    <?php
-                endwhile;
-            else:
-              echo '<p>There are no projects listed.</p>';
-            endif;
-            wp_reset_query();
-            ?>
-              </ul>
-            </section>
-        
-            <section id="content-1" class="tab p-institutional">
-              <h2>Institutional Service Projects</h2>
-              <ul>
-              <?php
-              $args = array ( 
-              'post_type' => 'projects',
-              'category_name' => 'p-institutional',
-            	'posts_per_page' => -1,
-              'orderby' => 'title', 
-              'order' => 'ASC'      
-               );
-              $custom_query = new WP_Query( $args );
+        <?php while ( have_posts() ) : the_post(); ?>
 
-              if ( $custom_query->have_posts() ):
-                  while ( $custom_query->have_posts() ) :
-                      $custom_query->the_post(); ?>
-                  
-                      <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                  
-                  <?php
-                  endwhile;
-              else:
-                echo '<p>There are no projects listed.</p>';
-              endif;
-              wp_reset_query();
-              ?>
-              </ul>
-            </section>          
-        </div>
-      </article> <!-- project-items -->
-</div><!-- #content -->
+        	<?php get_template_part('projects-content', get_post_format() );   ?>
+
+        <?php endwhile;?>
+
+          <div class="pagination">
+            <?php echo my_pagination(); ?>
+          </div>
+        
+        <?php else : ?>
+
+          <?php echo "There were no posts found." ?>
+
+        <?php endif; ?>
+        <?php wp_reset_query(); ?>
+      </div>
+      <div class="right col">
+        <?php get_sidebar(); ?>
+      </div>
+
+    </div><!-- #content -->
 </div><!-- #primary -->
 
 <?php get_footer(); ?>

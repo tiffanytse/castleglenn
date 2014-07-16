@@ -82,3 +82,44 @@ function prefix_pgm_description( $description ) {
 }
 
 add_filter( 'pronamic_google_maps_item_description', 'prefix_pgm_description' );
+
+// Archive for All Post Types
+
+function namespace_add_custom_types( $query ) {
+  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'projects'
+		));
+	  return $query;
+	}
+}
+add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
+
+// Meta Info
+
+function twentytwelve_entry_meta() {
+	// Translators: used between list items, there is a space after the comma.
+	$categories_list = get_the_category_list( __( ', ', 'twentytwelve' ) );
+
+	// Translators: used between list items, there is a space after the comma.
+	$tag_list = get_the_tag_list( '', __( ', ', 'twentytwelve' ) );
+
+
+
+	// Translators: 1 is category, 2 is tag, 3 is the date and 4 is the author's name.
+	if ( $tag_list ) {
+		$utility_text = __( '<div class="meta-info"><span class="by-author"> By %4$s</span>  %3$s <span class="tags"> %2$s </span></div>', 'twentytwelve' );
+	} elseif ( $categories_list ) {
+		$utility_text = __( '<div class="meta-info"><span class="by-author"> By %4$s</span> %3$s</div>', 'twentytwelve' );
+	} else {
+		$utility_text = __( '<span class="by-author"> By %4$s</span>', 'twentytwelve' );
+	}
+
+	printf(
+		$utility_text,
+		$categories_list,
+		$tag_list,
+		$date,
+		$author
+	);
+}
