@@ -113,10 +113,12 @@ body .site{
   margin-top: 0;
   width: 100%;
   .widget-area{
+    margin: 0;
+    width: 100%;
+    
     h3{
       border-bottom: 4px double $light-grey;
     }
-    width: 100%;
     a, 
     a:link,
     a:visited{

@@ -121,6 +121,7 @@ body .site {
   margin-top: 0;
   width: 100%; }
   .site-content .widget-area {
+    margin: 0;
     width: 100%; }
     .site-content .widget-area h3 {
       border-bottom: 4px double #ededed; }
