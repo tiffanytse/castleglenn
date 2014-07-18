@@ -88,7 +88,7 @@ add_filter( 'pronamic_google_maps_item_description', 'prefix_pgm_description' );
 function namespace_add_custom_types( $query ) {
   if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
     $query->set( 'post_type', array(
-     'post', 'projects'
+     'post', 'projects', 'news', 'public-consultation'
 		));
 	  return $query;
 	}

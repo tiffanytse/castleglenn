@@ -21,7 +21,7 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'projects-content-page', 'page' ); ?>
 		<?php endwhile; // end of the loop. ?>
-    <div class="left col">
+    <div class="left col-65">
     <?php 
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
@@ -52,7 +52,7 @@ get_header(); ?>
         <?php endif; ?>
         <?php wp_reset_query(); ?>
       </div>
-      <div class="right col">
+      <div class="right col-35">
         <?php get_sidebar(); ?>
       </div>
 

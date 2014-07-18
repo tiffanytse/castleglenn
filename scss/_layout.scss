@@ -111,6 +111,19 @@ body .site{
 
 .site-content{
   margin-top: 0;
+  width: 100%;
+  .widget-area{
+    h3{
+      border-bottom: 4px double $light-grey;
+    }
+    width: 100%;
+    a, 
+    a:link,
+    a:visited{
+      color: $blue;
+      font-weight: normal;
+    }
+  }
   article{
     padding-bottom: 2em;
     margin-bottom: 2em;
@@ -125,6 +138,7 @@ body .site{
   #content{
     max-width: 71em;
     margin: 3em auto;
+    @extend .cf;
     article{
       padding: 0 2em;
       @media #{$tablet-landscape}{
@@ -133,6 +147,39 @@ body .site{
     }
   }
 }
+
+// Columns
+.left, .right{
+  @include border-box;
+  float: left;
+  padding: 2em 1em;
+} 
+.col-65{
+  width: 100%;
+  
+  @media #{$tablet-landscape}{
+    width: 75%;
+    padding: 2em 1em 0 0;
+    
+  }
+}
+
+.col-35{
+  width: 100%;
+  @media #{$tablet-landscape}{
+    width: 25%;
+    padding: 2.6em 0 0 1em;
+  }
+}
+
+span.tags{
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+  display: block;
+  background: transparent url(imgs/tag.png) no-repeat left center;
+  background-size: 18px;
+}
+
 
 .home .site-content{
   #content{
