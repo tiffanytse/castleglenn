@@ -47,8 +47,6 @@ date{
     display: none;
   }
 }
-
-
 .project-items{
   .entry-title{
     @extend .beta;
@@ -56,6 +54,7 @@ date{
     
   }
 }
+
 
 /**
  * Contact Page
@@ -102,6 +101,7 @@ date{
   }
 }
 
+
 /**
  * Project Tabs 
  */
@@ -131,7 +131,6 @@ date{
      bottom: -1px;
      margin: 0 4px 0 0;
    }
-   
    label:hover {
      cursor: pointer;
      border-right: 1px solid #ddd;
@@ -139,7 +138,6 @@ date{
      -webkit-box-shadow:0 -5px 0 0 $light-grey;
      box-shadow:0 -5px 0 0 $light-grey;
    }
-
    #tab1:checked ~ .p-public, 
    #tab2:checked ~ .p-private, 
    #tab3:checked ~ .p-institutional{
@@ -171,9 +169,3 @@ date{
       }
    }
 }
-
-
-
- 
-
-
