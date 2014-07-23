@@ -86,7 +86,7 @@ add_filter( 'pronamic_google_maps_item_description', 'prefix_pgm_description' );
 // Archive for All Post Types
 
 function namespace_add_custom_types( $query ) {
-  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+  if( is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
     $query->set( 'post_type', array(
      'projects'
 		));
