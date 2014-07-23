@@ -124,6 +124,11 @@ body .site{
     a:visited{
       color: $blue;
       font-weight: normal;
+      text-decoration: none;
+    }
+    a:hover,
+    a:focus{
+      text-decoration: underline;
     }
   }
   article{
@@ -179,7 +184,7 @@ span.tags{
   padding-left: 1.5em;
   margin-bottom: 1em;
   display: block;
-  background: transparent url(imgs/tag.png) no-repeat left center;
+  background: transparent url(imgs/tag.png) no-repeat left .3em;
   background-size: 18px;
 }
 

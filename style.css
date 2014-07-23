@@ -129,7 +129,11 @@ body .site {
     .site-content .widget-area a:link,
     .site-content .widget-area a:visited {
       color: #5178bc;
-      font-weight: normal; }
+      font-weight: normal;
+      text-decoration: none; }
+    .site-content .widget-area a:hover,
+    .site-content .widget-area a:focus {
+      text-decoration: underline; }
   .site-content article {
     padding-bottom: 2em;
     margin-bottom: 2em;
@@ -175,7 +179,7 @@ span.tags {
   padding-left: 1.5em;
   margin-bottom: 1em;
   display: block;
-  background: transparent url(imgs/tag.png) no-repeat left center;
+  background: transparent url(imgs/tag.png) no-repeat left 0.3em;
   background-size: 18px; }
 
 .home .site-content #content {
