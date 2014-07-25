@@ -223,7 +223,7 @@ h1, .alpha, .entry-header .entry-title {
   font-size: 32px;
   font-size: 2rem; }
 
-h2, .beta, .project-items .entry-title {
+h2, .beta {
   font-size: 24px;
   font-size: 1.5rem; }
 
@@ -251,11 +251,9 @@ h6, .zeta {
 .entry-header .comment-content .entry-title {
   font-size: 32px;
   font-size: 2rem; }
-.entry-content h2, .entry-content .beta, .entry-content .project-items .entry-title, .project-items .entry-content .entry-title,
+.entry-content h2, .entry-content .beta,
 .comment-content h2,
-.comment-content .beta,
-.comment-content .project-items .entry-title,
-.project-items .comment-content .entry-title {
+.comment-content .beta {
   font-size: 24px;
   font-size: 1.5rem; }
 .entry-content h3, .entry-content .gamma,
@@ -938,9 +936,6 @@ date {
 .category-services date,
 .type-projects date {
   display: none; }
-
-.project-items .entry-title {
-  margin-bottom: 0; }
 
 .page-template-page-templatesprojects-page-php article {
   margin: 0; }
