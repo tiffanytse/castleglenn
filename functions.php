@@ -83,18 +83,6 @@ function prefix_pgm_description( $description ) {
 
 add_filter( 'pronamic_google_maps_item_description', 'prefix_pgm_description' );
 
-// Archive for All Post Types
-
-function namespace_add_custom_types( $query ) {
-  if( is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
-    $query->set( 'post_type', array(
-     'projects'
-		));
-	  return $query;
-	}
-}
-add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
-
 // Meta Info
 
 function twentytwelve_entry_meta() {
@@ -123,3 +111,28 @@ function twentytwelve_entry_meta() {
 		$author
 	);
 }
+
+
+// Archive for All Post Types
+
+function namespace_add_custom_types( $query ) {
+  if( is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'projects'
+		));
+	  return $query;
+	}
+}
+add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
+
+
+// Tag Listing
+add_filter( 'widget_tag_cloud_args', 'my_widget_tag_cloud_args' );
+function my_widget_tag_cloud_args( $args ) {
+	$args['smallest'] = 12;
+	$args['largest'] = 12;
+	$args['number'] = 0;
+	$args['format'] = 'list';	
+	return $args;
+}
+
