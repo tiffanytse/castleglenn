@@ -185,12 +185,10 @@
 }
 
 
-.wp-tag-cloud{
+.widget-area .widget .wp-tag-cloud{
   li{
     margin: 1em 0;
-    a{
-      line-height: 1;
-    }
+    line-height: 1;
   }
 }
 
