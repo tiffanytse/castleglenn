@@ -297,6 +297,9 @@ h6, .zeta {
 .entry-content a:visited {
   color: #3d609d; }
 
+.normal {
+  font-weight: normal; }
+
 .no-padding {
   padding: 0; }
 
