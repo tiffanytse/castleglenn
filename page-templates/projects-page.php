@@ -28,7 +28,7 @@ get_header(); ?>
         query_posts(array(
         	'post_type'      => 'projects', // You can add a custom post type if you like
         	'paged'          => $paged,
-        	'posts_per_page' => 10,
+        	'posts_per_page' => 20,
         	'caller_get_posts' => 1,
         	'rewrite' => array( 'slug' => 'project-list' ),
         ));  
