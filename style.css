@@ -946,7 +946,10 @@ date {
   margin: 0; }
   .page-template-page-templatesprojects-page-php article .entry-header {
     margin: 0;
-    padding: 1em 0; }
+    padding: 1.5em 0; }
+    .page-template-page-templatesprojects-page-php article .entry-header h2 {
+      font-size: 1.375em;
+      line-height: 1.2; }
 .page-template-page-templatesprojects-page-php .pagination {
   margin-top: 2em; }
 

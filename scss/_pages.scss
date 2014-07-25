@@ -59,7 +59,11 @@ date{
     margin:0;
     .entry-header{
       margin: 0;
-      padding: 1em 0;
+      padding: 1.5em 0;
+      h2{
+        font-size: 1.375em;
+        line-height: 1.2;
+      }
     }
   }
   .pagination{
