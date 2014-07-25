@@ -51,7 +51,19 @@ date{
   .entry-title{
     @extend .beta;
     margin-bottom: 0;
-    
+  }
+}
+
+.page-template-page-templatesprojects-page-php{
+  article{
+    margin:0;
+    .entry-header{
+      margin: 0;
+      padding: 1em 0;
+    }
+  }
+  .pagination{
+    margin-top: 2em;
   }
 }
 
