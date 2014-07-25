@@ -32,14 +32,26 @@
 
 a, 
 a:link,
-a:visited{
+a:visited, 
+.entry-header .entry-title a{
   color: $blue;
+  text-decoration: none;
 }
 
 a:hover,
 a:active,
 a:focus{
   color: darken($blue, 10%);
+  text-decoration: underline;
+}
+
+.entry-header .entry-title a{
+  &:hover,
+  &:active,
+  &:focus{
+    color: darken($blue, 10%);
+    text-decoration: underline;
+  }
 }
 
 .button{

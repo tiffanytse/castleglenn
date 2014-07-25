@@ -327,13 +327,20 @@ h6, .zeta {
 
 a,
 a:link,
-a:visited {
-  color: #5178bc; }
+a:visited,
+.entry-header .entry-title a {
+  color: #5178bc;
+  text-decoration: none; }
 
 a:hover,
 a:active,
 a:focus {
-  color: #3d609d; }
+  color: #3d609d;
+  text-decoration: underline; }
+
+.entry-header .entry-title a:hover, .entry-header .entry-title a:active, .entry-header .entry-title a:focus {
+  color: #3d609d;
+  text-decoration: underline; }
 
 .button {
   background: #5178bc;
