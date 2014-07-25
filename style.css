@@ -766,6 +766,11 @@ hr {
   .home-content {
     margin: -155px auto 0; } }
 
+.wp-tag-cloud ul li {
+  margin: 1em 0; }
+  .wp-tag-cloud ul li a {
+    line-height: 1; }
+
 /*
 * Visual Form Builder
 */
