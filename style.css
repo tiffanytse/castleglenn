@@ -390,7 +390,7 @@ hr {
 */
 #site-navigation {
   margin-top: 0; }
-  #site-navigation h3.menu-toggle {
+  #site-navigation .menu-toggle {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -412,12 +412,12 @@ hr {
     border: 1px solid #999;
     opacity: .3; }
     @media only screen and (min-width: 37.5em) {
-      #site-navigation h3.menu-toggle {
+      #site-navigation .menu-toggle {
         display: inline-block; } }
     @media only screen and (min-width: 37.5em) {
-      #site-navigation h3.menu-toggle {
+      #site-navigation .menu-toggle {
         display: none !important; } }
-    #site-navigation h3.menu-toggle.toggled-on {
+    #site-navigation .menu-toggle.toggled-on {
       background-image: url("./imgs/close.png");
       background-image: none, url("./imgs/close.svg");
       background-repeat: no-repeat;
@@ -634,10 +634,12 @@ hr {
   @media only screen and (min-width: 47.5em) {
     .service-type {
       margin: 0 auto 0.5em; } }
-  .service-type:hover img {
-    opacity: 0.7; }
-  .service-type:hover h2 {
-    border-bottom: 1px solid #dddddd; }
+  .service-type:hover {
+    text-decoration: none; }
+    .service-type:hover img {
+      opacity: 0.7; }
+    .service-type:hover h2 {
+      border-bottom: 1px solid #dddddd; }
   .service-type h2 {
     font-size: 19.2px;
     font-size: 1.2rem;

@@ -4,7 +4,7 @@
 
 #site-navigation{
   margin-top: 0;
-  h3.menu-toggle{
+  .menu-toggle{
     @include hide-text;
     @include zero;
     -webkit-border-radius: 3px;
